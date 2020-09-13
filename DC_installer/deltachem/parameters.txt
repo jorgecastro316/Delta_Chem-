@@ -1,0 +1,11 @@
+critical_point_element = He
+fittest_element = Ar
+PSD_solve_time = 60
+PSD_grid_res = 0.25
+PSD_test_particle = 0.15
+peak_finder_prominence = 0.4
+peak_finder_height = 0.4
+overlap_sphr_extra = 0.3
+Tol_plane_tet = 0.1
+pore_sphr_vdw_corr = 0
+
