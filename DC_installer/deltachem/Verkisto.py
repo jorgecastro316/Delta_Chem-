@@ -599,7 +599,7 @@ if 'dc_approach' in options:
 			len_plh = len(f_transformed_vertices)
 			len_polyh += len_plh
 			polyhedra_vertices.append(f_transformed_vertices)		
-		len_polyh = len_polyh - len(irreducible_volume_points)
+
 		fp.write(str(len(structure) + len(irreducible_volume_points) + len_polyh) +'\n')
 		fp.write('XYZ file: irreducible volume points as ' + critical_point_element + ' atoms. ' + 'Fittest polyhedra vertices shown as ' + fittest_element + ' atoms' + '\n')
 
@@ -612,8 +612,7 @@ if 'dc_approach' in options:
 		for fittest_polyhedron in fittest_polyhedrons:
 			f_transformed_vertices,faces_list,R,Rf,radius_d,scale_factor,o_direction,faces_polyhedron,num_faces,Volume_of_polyhedron,Area_of_polyhedron,big_face_area,small_face_area,fit_polyhedron,faces_areas = fittest_polyhedron
 			for vertex in f_transformed_vertices:
-				if vertex not in irreducible_volume_points:
-					fp.write('{0:6.2s} {1:12.6f} {2:12.6f} {3:12.6f}\n'.format(str(fittest_element),vertex[0], vertex[1], vertex[2]))
+				fp.write('{0:6.2s} {1:12.6f} {2:12.6f} {3:12.6f}\n'.format(str(fittest_element),vertex[0], vertex[1], vertex[2]))
 
 #######################################################################################################################################################
 ############################################################### Write the general output ##############################################################
